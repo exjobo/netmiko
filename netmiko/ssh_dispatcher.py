@@ -4,6 +4,7 @@ from netmiko.cisco import CiscoIosBase
 from netmiko.cisco import CiscoAsaSSH
 from netmiko.cisco import CiscoNxosSSH
 from netmiko.cisco import CiscoXrSSH
+from netmiko.cisco import CiscoXrTelnet
 from netmiko.cisco import CiscoWlcSSH
 from netmiko.cisco import CiscoS300SSH
 from netmiko.eltex import EltexSSH
@@ -96,6 +97,7 @@ CLASS_MAPPER = new_mapper
 
 # Add telnet drivers
 CLASS_MAPPER['cisco_ios_telnet'] = CiscoIosBase
+CLASS_MAPPER['cisco_xr_telnet'] = CiscoXrTelnet
 CLASS_MAPPER['dell_powerconnect_telnet'] = DellPowerConnectTelnet
 CLASS_MAPPER['generic_termserver_telnet'] = TerminalServerTelnet
 
