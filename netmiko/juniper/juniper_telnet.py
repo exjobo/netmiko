@@ -1,9 +1,10 @@
+
 from __future__ import unicode_literals
 
 import re
 import time
 
-from netmiko.juniper import JuniperBase
+from netmiko.juniper.juniper_ssh import JuniperBase
 
 
 class JuniperTelnet(JuniperBase):
