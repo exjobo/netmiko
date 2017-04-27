@@ -6,7 +6,7 @@ import time
 from netmiko.base_connection import BaseConnection
 
 
-class JuniperSSH(BaseConnection):
+class JuniperBase(BaseConnection):
     """
     Implement methods for interacting with Juniper Networks devices.
 
@@ -182,3 +182,6 @@ class JuniperSSH(BaseConnection):
                 return "\n".join(response_list[:-1])
 
         return a_string
+
+class JuniperSSH(JuniperBase):
+    pass

@@ -13,6 +13,7 @@ from netmiko.hp import HPProcurveSSH, HPComwareSSH
 from netmiko.huawei import HuaweiSSH
 from netmiko.f5 import F5LtmSSH
 from netmiko.juniper import JuniperSSH
+from netmiko.juniper import JuniperTelnet
 from netmiko.brocade import BrocadeNosSSH
 from netmiko.brocade import BrocadeNetironSSH
 from netmiko.brocade import BrocadeFastironSSH
@@ -98,6 +99,7 @@ CLASS_MAPPER = new_mapper
 # Add telnet drivers
 CLASS_MAPPER['cisco_ios_telnet'] = CiscoIosBase
 CLASS_MAPPER['cisco_xr_telnet'] = CiscoXrTelnet
+CLASS_MAPPER['juniper_telnet'] = JuniperTelnet
 CLASS_MAPPER['dell_powerconnect_telnet'] = DellPowerConnectTelnet
 CLASS_MAPPER['generic_termserver_telnet'] = TerminalServerTelnet
 
