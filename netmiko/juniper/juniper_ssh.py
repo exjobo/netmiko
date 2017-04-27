@@ -58,11 +58,11 @@ class JuniperBase(BaseConnection):
 
     def check_config_mode(self, check_string=']'):
         """Checks if the device is in configuration mode or not."""
-        return super(JuniperSSH, self).check_config_mode(check_string=check_string)
+        return super(JuniperBase, self).check_config_mode(check_string=check_string)
 
     def config_mode(self, config_command='configure'):
         """Enter configuration mode."""
-        return super(JuniperSSH, self).config_mode(config_command=config_command)
+        return super(JuniperBase, self).config_mode(config_command=config_command)
 
     def exit_config_mode(self, exit_config='exit configuration-mode'):
         """Exit configuration mode."""
@@ -150,7 +150,7 @@ class JuniperBase(BaseConnection):
 
     def strip_prompt(self, *args, **kwargs):
         """Strip the trailing router prompt from the output."""
-        a_string = super(JuniperSSH, self).strip_prompt(*args, **kwargs)
+        a_string = super(JuniperBase, self).strip_prompt(*args, **kwargs)
         return self.strip_context_items(a_string)
 
     @staticmethod
